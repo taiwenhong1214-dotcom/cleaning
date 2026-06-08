@@ -686,6 +686,13 @@
     if (floatWa && t.wa_float_msg) {
       floatWa.href = `https://api.whatsapp.com/send?phone=60122911406&text=${encodeURIComponent(t.wa_float_msg)}`;
     }
+    
+    const navMenu = document.getElementById('navLinks');
+    const hamburgerBtn = document.getElementById('hamburger');
+    if (navMenu && navMenu.classList.contains('show-mobile')) {
+      navMenu.classList.remove('show-mobile');
+      if (hamburgerBtn) hamburgerBtn.style.transform = 'rotate(0deg)';
+    }
   }
 
   // 页面加载时恢复语言偏好
