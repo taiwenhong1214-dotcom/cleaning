@@ -203,34 +203,93 @@
     }
   }
   @media (max-width: 900px) {
-    .about-grid, .services-grid, .awards-grid, .ba-layout, .quote-layout { grid-template-columns: 1fr; }
-        /* 1. 显示汉堡按钮，隐藏普通菜单 */
-        .hamburger {
-        display: block;
-        font-size: 26px;
-        color: var(--gold);
-        cursor: pointer;
-        z-index: 1001;
-    }
-    .nav-links {
-        display: none;                 /* 默认隐藏 */
-        position: absolute;
-        top: 70px;                    /* 避开导航栏高度 */
-        left: 0;
-        width: 100%;
-        background: rgba(9,16,26,0.98);
-        flex-direction: column;
-        gap: 0;
-        padding: 20px 0;
-        border-bottom: 1px solid var(--border);
-    }
-    .nav-links.show-mobile {
-        display: flex;                /* 点击汉堡后显示 */
-    }
-    .nav-links li {
-        text-align: center;
-        padding: 12px 0;
-    }
+      .about-grid, .services-grid, .awards-grid, .ba-layout, .quote-layout { 
+          grid-template-columns: 1fr; 
+      }
+
+      /* 汉堡按钮（保持你的原样） */
+      .hamburger {
+          display: block;
+          font-size: 26px;
+          color: var(--gold);
+          cursor: pointer;
+          z-index: 1001;
+          transition: transform 0.3s;
+      }
+      .hamburger:active {
+          transform: scale(0.9);
+      }
+
+      /* 下拉菜单容器 */
+      .nav-links {
+          display: none;
+          position: absolute;
+          top: 70px;
+          left: 0;
+          width: 100%;
+          background: rgba(9,16,26,0.96);  /* 深色半透明 */
+          backdrop-filter: blur(10px);     /* 毛玻璃效果 */
+          flex-direction: column;
+          gap: 0;
+          padding: 10px 0;
+          border-bottom: 1px solid var(--border);
+          box-shadow: 0 20px 30px rgba(0,0,0,0.5);
+          
+          /* 动画初始状态 */
+          opacity: 0;
+          transform: translateY(-10px);
+          transition: opacity 0.3s ease, transform 0.3s ease;
+      }
+
+      /* 展开时 */
+      .nav-links.show-mobile {
+          display: flex;
+          opacity: 1;
+          transform: translateY(0);
+      }
+
+      /* 每个菜单项 */
+      .nav-links li {
+          text-align: center;
+          margin: 0;
+          position: relative;
+          /* 使用细线分割，仅非最后一项显示 */
+          border-bottom: 1px solid rgba(212,175,55,0.2); /* 淡金色细线 */
+      }
+      .nav-links li:last-child {
+          border-bottom: none; /* 最后一项不需要线 */
+      }
+
+      /* 链接样式 */
+      .nav-links a {
+          display: block;
+          padding: 16px 20px;
+          font-size: 14px;
+          font-weight: 500;
+          letter-spacing: 0.1em;
+          color: var(--white-dim);
+          transition: all 0.3s ease;
+          text-decoration: none;
+      }
+
+      /* 触摸反馈 */
+      .nav-links a:active,
+      .nav-links a:hover {
+          background: rgba(212,175,55,0.1);
+          color: var(--gold);
+      }
+
+      /* 保留 CTA 按钮的特殊样式（不加背景色，只改颜色） */
+      .nav-links .nav-cta {
+          background: transparent;
+          color: var(--gold) !important;
+          font-weight: 700;
+          border-bottom: none; /* 避免双层线 */
+      }
+      .nav-links .nav-cta:hover {
+          background: rgba(212,175,55,0.15);
+          color: var(--gold-light) !important;
+      }
   }
   
   /* 📱 MOBILE FIXES */
@@ -787,6 +846,11 @@
           navLinks.classList.remove('show-mobile');
       }
   }
+  hamburger.addEventListener('click', function() {
+      navLinks.classList.toggle('show-mobile');
+      // 旋转动画
+      this.style.transform = navLinks.classList.contains('show-mobile') ? 'rotate(90deg)' : 'rotate(0deg)';
+  });
 </script>
 
 </body>
