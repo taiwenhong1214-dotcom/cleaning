@@ -200,7 +200,7 @@
     display: none;
     }
   }
-  
+
   @media (max-width: 1024px) {
       .hero {
           flex-direction: column;
@@ -328,6 +328,13 @@
     .modal-box { padding: 30px 20px; width: 92%; }
     .ba-container { aspect-ratio: 1/1; }
     .lightbox-close { top: 10px; right: 20px; font-size: 35px; }
+    .c-item a {
+        color: var(--white);        /* 纯白，不再半透明 */
+        font-size: 14px;            /* 稍微加大一点，更易阅读 */
+        text-decoration: none;      /* 去掉下划线更干净 */
+        border-bottom: 1px solid rgba(212,175,55,0.4);
+        padding-bottom: 2px;
+    }
     
     .chat-box-container { 
       right: 20px; 
