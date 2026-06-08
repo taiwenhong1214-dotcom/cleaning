@@ -51,8 +51,7 @@
   .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
   .btn-primary:active { transform: scale(0.95); } /* 点击时稍微收缩 */
 
-  .hero-stats { z-index: 2; display: flex; gap: 50px; background: rgba(17,28,43,0.8); padding: 30px 50px; border: 1px solid var(--border); border-radius: 8px; backdrop-filter: blur(5px); align-self: flex-end; }
-  .stat-item { text-align: center; }
+  .hero-stats { z-index: 2; display: flex; gap: 50px; background: rgba(17,28,43,0.8); padding: 30px 50px; border: 1px solid var(--border); border-radius: 8px; backdrop-filter: blur(5px); align-self: flex-end;}
   .stat-num { font-family: 'Playfair Display', serif; font-size: 46px; font-weight: 700; color: var(--gold); line-height: 1; display: block; }
   .stat-label { font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--white); margin-top: 8px; display: block; font-weight: 500;}
 
@@ -196,12 +195,27 @@
      💻 屏幕自适应机制 (Responsive Design)
      ========================================= */
   @media (max-width: 1200px) {
-    .hero { flex-direction: column; justify-content: center; align-items: flex-start; padding-top: 150px; gap: 0; }
-    .hero-stats { margin-top: 50px; flex-wrap: wrap; align-self: flex-start; }
+
     .hamburger {
     display: none;
     }
   }
+  
+  @media (max-width: 1024px) {
+      .hero {
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          padding-top: 140px;
+          gap: 30px;
+      }
+      .hero-stats {
+          margin-top: 30px;
+          flex-wrap: wrap;
+          align-self: flex-start;    /* 平板时靠左对齐 */
+      }
+  }
+
   @media (max-width: 900px) {
       .about-grid, .services-grid, .awards-grid, .ba-layout, .quote-layout { 
           grid-template-columns: 1fr; 
