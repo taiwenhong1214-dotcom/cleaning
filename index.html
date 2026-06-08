@@ -225,8 +225,16 @@
     .chat-box-container { right: 20px; left: 20px; width: auto; bottom: 180px; transform-origin: bottom center; }
   }
   @media (max-width: 380px) {
-    .nav-logo span { display: none; } /* 极小屏幕隐藏 Cleaning Services 词汇，仅保留 HC 以防挤压 */
-    .nav-logo { font-size: 20px; }
+    .nav-logo { 
+      font-size: 16px; /* 调整主标题大小 */
+      white-space: normal; /* 允许文字换行 */
+      line-height: 1.1; 
+    }
+    .nav-logo span { 
+      display: block; /* 强制换行到第二行 */
+      font-size: 11px; /* 把 Cleaning Services 缩小 */
+      margin-top: 2px;
+    } 
   }
 </style>
 </head>
