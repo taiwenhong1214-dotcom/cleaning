@@ -837,6 +837,10 @@
   if (hamburger && navLinks) {
       hamburger.addEventListener('click', function() {
           navLinks.classList.toggle('show-mobile');
+          // 旋转动画
+          this.style.transform = navLinks.classList.contains('show-mobile') 
+              ? 'rotate(90deg)' 
+              : 'rotate(0deg)';
       });
   }
 
@@ -845,12 +849,12 @@
       if (navLinks) {
           navLinks.classList.remove('show-mobile');
       }
+      // 重置汉堡按钮旋转
+      if (hamburger) {
+          hamburger.style.transform = 'rotate(0deg)';
+      }
   }
-  hamburger.addEventListener('click', function() {
-      navLinks.classList.toggle('show-mobile');
-      // 旋转动画
-      this.style.transform = navLinks.classList.contains('show-mobile') ? 'rotate(90deg)' : 'rotate(0deg)';
-  });
+
 </script>
 
 </body>
