@@ -30,15 +30,18 @@
 
   /* ── NAV ── */
   nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 20px 60px; display: flex; align-items: center; justify-content: space-between; background: rgba(9,16,26,0.95); border-bottom: 1px solid var(--border); transition: padding 0.3s; }
-  .nav-logo { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; color: var(--white); }
+  .nav-logo { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; color: var(--white); white-space: nowrap; }
   .nav-logo span { color: var(--gold); }
+  
+  /* 右侧控制区包含链接、语言切换和汉堡菜单 */
+  .nav-right { display: flex; align-items: center; gap: 35px; }
   .nav-links { display: flex; gap: 35px; align-items: center; list-style: none; }
   .nav-links a { color: var(--white-dim); text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; transition: color 0.3s; }
   .nav-links a:hover { color: var(--gold); }
   .nav-cta { background: var(--gold); color: var(--navy) !important; padding: 10px 24px !important; border-radius: 4px; font-weight: 700 !important; }
   .nav-cta:hover { background: var(--gold-light); }
 
-  /* 语言切换器样式 */
+  /* 语言切换器样式（常驻顶部） */
   .lang-select {
     background: rgba(255, 255, 255, 0.05);
     color: var(--white);
@@ -46,7 +49,7 @@
     border-radius: 4px;
     padding: 6px 12px;
     font-family: 'DM Sans', sans-serif;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 600;
     cursor: pointer;
     outline: none;
@@ -185,6 +188,7 @@
       .hero-stats { margin-top: 30px; flex-wrap: wrap; align-self: flex-start; }
   }
   @media (max-width: 900px) {
+      .nav-right { gap: 15px; } /* 缩小组件间距 */
       .about-grid, .services-grid, .awards-grid, .ba-layout, .quote-layout { grid-template-columns: 1fr; }
       .hamburger { display: block; font-size: 26px; color: var(--gold); cursor: pointer; z-index: 1001; transition: transform 0.3s; }
       .hamburger:active { transform: scale(0.9); }
@@ -196,12 +200,11 @@
       .nav-links a:active, .nav-links a:hover { background: rgba(212,175,55,0.1); color: var(--gold); }
       .nav-links .nav-cta { background: transparent; color: var(--gold) !important; font-weight: 700; border-bottom: none; }
       .nav-links .nav-cta:hover { background: rgba(212,175,55,0.15); color: var(--gold-light) !important; }
-      /* Mobile Lang Select styling */
-      .nav-links select.lang-select { margin: 15px auto; display: block; width: 80%; text-align: center; padding: 10px; font-size: 14px; }
   }
   @media (max-width: 768px) {
     nav { padding: 15px 20px !important; }
-    .nav-logo { font-size: 20px; }
+    .nav-logo { font-size: 16px; } /* 缩小 Logo 保证语言切换器空间 */
+    .lang-select { padding: 5px 10px; font-size: 12px; }
     section { padding: 60px 20px; }
     .hero { padding: 120px 20px 60px; }
     .hero h1 { font-size: 40px; }
@@ -221,6 +224,10 @@
     .c-item a { color: var(--white); font-size: 14px; text-decoration: none; border-bottom: 1px solid rgba(212,175,55,0.4); padding-bottom: 2px; }
     .chat-box-container { right: 20px; left: 20px; width: auto; bottom: 180px; transform-origin: bottom center; }
   }
+  @media (max-width: 380px) {
+    .nav-logo span { display: none; } /* 极小屏幕隐藏 Cleaning Services 词汇，仅保留 HC 以防挤压 */
+    .nav-logo { font-size: 20px; }
+  }
 </style>
 </head>
 <body>
@@ -228,21 +235,24 @@
 <!-- NAVBAR -->
 <nav>
   <div class="nav-logo">HC <span>Cleaning Services</span></div>
-  <div class="hamburger" id="hamburger">☰</div>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="#about" onclick="closeMobileMenu()" data-i18n="nav_heritage">Our Heritage</a></li>
-    <li><a href="#services" onclick="closeMobileMenu()" data-i18n="nav_services">Services</a></li>
-    <li><a href="#awards" onclick="closeMobileMenu()" data-i18n="nav_awards">Awards</a></li>
-    <!-- Language Switcher -->
-    <li>
-      <select id="langSelect" onchange="changeLang(this.value)" class="lang-select">
-        <option value="en">English</option>
-        <option value="ms">Bahasa Melayu</option>
-        <option value="zh">中文</option>
-      </select>
-    </li>
-    <li><a href="#quote" class="nav-cta" onclick="closeMobileMenu()" data-i18n="nav_quote">Request Quotation</a></li>
-  </ul>
+  
+  <div class="nav-right">
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about" onclick="closeMobileMenu()" data-i18n="nav_heritage">Our Heritage</a></li>
+      <li><a href="#services" onclick="closeMobileMenu()" data-i18n="nav_services">Services</a></li>
+      <li><a href="#awards" onclick="closeMobileMenu()" data-i18n="nav_awards">Awards</a></li>
+      <li><a href="#quote" class="nav-cta" onclick="closeMobileMenu()" data-i18n="nav_quote">Request Quotation</a></li>
+    </ul>
+
+    <!-- 语言切换器常驻顶栏（已精简显示文本以适配移动端） -->
+    <select id="langSelect" onchange="changeLang(this.value)" class="lang-select">
+      <option value="en">EN</option>
+      <option value="ms">BM</option>
+      <option value="zh">中文</option>
+    </select>
+
+    <div class="hamburger" id="hamburger">☰</div>
+  </div>
 </nav>
 
 <!-- HERO -->
