@@ -198,10 +198,39 @@
   @media (max-width: 1200px) {
     .hero { flex-direction: column; justify-content: center; align-items: flex-start; padding-top: 150px; gap: 0; }
     .hero-stats { margin-top: 50px; flex-wrap: wrap; align-self: flex-start; }
+    .hamburger {
+    display: none;
+    }
   }
   @media (max-width: 900px) {
     .about-grid, .services-grid, .awards-grid, .ba-layout, .quote-layout { grid-template-columns: 1fr; }
-    .nav-links { display: none; }
+        /* 1. 显示汉堡按钮，隐藏普通菜单 */
+        .hamburger {
+        display: block;
+        font-size: 26px;
+        color: var(--gold);
+        cursor: pointer;
+        z-index: 1001;
+    }
+    .nav-links {
+        display: none;                 /* 默认隐藏 */
+        position: absolute;
+        top: 70px;                    /* 避开导航栏高度 */
+        left: 0;
+        width: 100%;
+        background: rgba(9,16,26,0.98);
+        flex-direction: column;
+        gap: 0;
+        padding: 20px 0;
+        border-bottom: 1px solid var(--border);
+    }
+    .nav-links.show-mobile {
+        display: flex;                /* 点击汉堡后显示 */
+    }
+    .nav-links li {
+        text-align: center;
+        padding: 12px 0;
+    }
   }
   
   /* 📱 MOBILE FIXES */
@@ -240,6 +269,7 @@
 <!-- NAVBAR -->
 <nav>
   <div class="nav-logo">HC <span>Cleaning Services</span></div>
+  <div class="hamburger" id="hamburger">☰</div>
   <ul class="nav-links">
     <li><a href="#about">Our Heritage</a></li>
     <li><a href="#services">Services</a></li>
@@ -741,6 +771,22 @@
     const waLink = "https://api.whatsapp.com/send?phone=" + targetWhatsApp + "&text=" + message;
     window.open(waLink, '_blank');
   }
+  // 汉堡菜单切换
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+
+if (hamburger && navLinks) {
+    hamburger.addEventListener('click', function() {
+        navLinks.classList.toggle('show-mobile');
+    });
+}
+
+// 点击菜单项后自动收起（提升体验）
+function closeMobileMenu() {
+    if (navLinks) {
+        navLinks.classList.remove('show-mobile');
+    }
+}
 </script>
 
 </body>
