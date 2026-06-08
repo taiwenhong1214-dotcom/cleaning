@@ -766,27 +766,27 @@
     message += "👤 *Name / Role:* " + name + "%0A";
     message += "🏢 *Company:* " + company + "%0A";
     message += "📞 *Contact:* " + phone + "%0A";
-    message += "🛠 *Service Needed:* " + service;
+    message += "🛠 *Service Needed:* " + service; 
     
     const waLink = "https://api.whatsapp.com/send?phone=" + targetWhatsApp + "&text=" + message;
     window.open(waLink, '_blank');
   }
-  // 汉堡菜单切换
-const hamburger = document.getElementById('hamburger');
-const navLinks = document.getElementById('navLinks');
+    // 汉堡菜单切换
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
 
-if (hamburger && navLinks) {
-    hamburger.addEventListener('click', function() {
-        navLinks.classList.toggle('show-mobile');
-    });
-}
+  if (hamburger && navLinks) {
+      hamburger.addEventListener('click', function() {
+          navLinks.classList.toggle('show-mobile');
+      });
+  }
 
-// 点击菜单项后自动收起（提升体验）
-function closeMobileMenu() {
-    if (navLinks) {
-        navLinks.classList.remove('show-mobile');
-    }
-}
+  // 点击菜单项后自动收起（提升体验）
+  function closeMobileMenu() {
+      if (navLinks) {
+          navLinks.classList.remove('show-mobile');
+      }
+  }
 </script>
 
 </body>
