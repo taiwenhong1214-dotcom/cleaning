@@ -222,3 +222,35 @@
       margin-top: 40px;
     } 
   }
+  /* ── FAQ ── */
+  .faq-item { border: 1px solid var(--border); border-radius: 6px; margin-bottom: 10px; background: rgba(255,255,255,0.02); overflow: hidden; }
+  .faq-q { padding: 15px 20px; cursor: pointer; font-weight: 600; font-size: 14px; position: relative; color: var(--white); transition: 0.3s; }
+  .faq-q::after { content: '+'; position: absolute; right: 20px; top: 15px; font-size: 18px; color: var(--gold); transition: 0.3s; line-height: 1;}
+  .faq-item.active .faq-q { color: var(--gold); }
+  .faq-item.active .faq-q::after { content: '\2212'; transform: rotate(180deg); }
+  .faq-a { padding: 0 20px; max-height: 0; font-size: 13px; color: var(--white-dim); transition: all 0.4s ease; opacity: 0; line-height: 1.6; }
+  .faq-item.active .faq-a { padding: 0 20px 20px; max-height: 500px; opacity: 1; }
+
+  /* ── ACCESSIBILITY ── */
+  .access-btn { position: fixed; bottom: 30px; left: 30px; width: 60px; height: 60px; background: var(--navy-mid); border: 1px solid var(--border); border-radius: 50%; color: var(--white); font-size: 30px; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 10000; transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
+  .access-btn:hover { background: var(--gold); color: var(--navy); transform: scale(1.1); }
+  .access-panel { position: fixed; bottom: 105px; left: 30px; background: var(--navy-mid); border: 1px solid var(--border); border-radius: 8px; padding: 20px; z-index: 10000; display: none; flex-direction: column; gap: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.6); min-width: 200px;}
+  .access-panel.show { display: flex; }
+  .access-panel h4 { color: var(--gold); font-size: 15px; margin-bottom: 5px; font-family: 'Playfair Display', serif; }
+  .access-panel button { background: rgba(255,255,255,0.05); color: var(--white); border: 1px solid var(--border); padding: 10px 15px; border-radius: 4px; cursor: pointer; font-size: 13px; text-align: left; transition: 0.3s; }
+  .access-panel button:hover, .access-panel button.active { background: var(--gold); color: var(--navy); font-weight: bold;}
+
+  /* Accessibility Classes */
+  body.large-text { font-size: 110%; }
+  body.large-text h1, body.large-text h2, body.large-text h3 { font-size: 110%; }
+  body.large-text .nav-links a { font-size: 15px; }
+  body.large-text .faq-q { font-size: 16px; }
+  body.large-text .faq-a { font-size: 15px; }
+  
+  body.high-contrast { background: #000; color: #fff; }
+  body.high-contrast * { border-color: #fff !important; }
+  body.high-contrast .hero::after { opacity: 0; }
+  body.high-contrast .service-card, body.high-contrast .faq-item, body.high-contrast .form-box { background: #000; }
+  
+  body.highlight-links a { text-decoration: underline !important; background: yellow !important; color: black !important; padding: 2px; }
+  body.highlight-links .btn-primary { background: yellow !important; color: black !important; border: 2px solid black !important;}

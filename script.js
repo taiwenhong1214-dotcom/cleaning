@@ -3,7 +3,7 @@
      ======================================= */
   const translations = {
     en: {
-      nav_heritage: "Our Heritage", nav_services: "Services", nav_awards: "Awards", nav_quote: "Request Quotation",
+      nav_heritage: "Our Heritage", nav_services: "Services", nav_awards: "Awards", nav_faq: "FAQ", nav_quote: "Request Quotation",
       hero_eyebrow: "ISO 9001:2015 Certified Corporation",
       hero_title: "Malaysia's Premier<br>Facility Management<br><em>Since-1986.</em>",
       hero_desc: "Empowering iconic commercial towers, luxury condominiums, and top-tier departmental stores across the Klang Valley with audit-ready, spotless environments for nearly 40 years.",
@@ -31,14 +31,15 @@
       pl_name: "e.g. Mr. Tan - Property Manager", pl_company: "e.g. Pavilion JMB", pl_phone: "01X-XXX XXXX",
       opt_1: "Commercial Contract Cleaning", opt_2: "Condominium Maintenance", opt_3: "Carpet / Upholstery Extraction", opt_4: "Facade / High-Level Cleaning", opt_5: "Landscaping & Gardening",
       dl_title: "Download Profile", dl_desc: "Please enter your details to access our full 60-page company profile and portfolio.",
-      pl_dl_name: "Your Name / Designation", pl_dl_company: "Company / Property Name", pl_dl_email: "Business Email", dl_btn: "Get PDF File", dl_success: "✓ Verification successful! The PDF will download shortly...",
-      footer_sub: "Subsidiaries: HTC Ecoresources Sdn Bhd | Friendly Eco Services Sdn Bhd", footer_copy: "© 2026 All Rights Reserved. ISO 9001:2015 Certified.",
+      pl_dl_name: "Your Name / Designation", pl_dl_company: "Company / Property Name", pl_dl_email: "Business Email", dl_btn: "Get PDF File", dl_pdpa: "By submitting, you agree to our Privacy Policy regarding the storage of your contact details.", dl_success: "✓ Verification successful! The PDF will download shortly...",
+      footer_sub: "Subsidiaries: HTC Ecoresources Sdn Bhd | Friendly Eco Services Sdn Bhd", footer_copy: "© 2026 All Rights Reserved. ISO 9001:2015 Certified.", footer_privacy: "Privacy Policy", footer_terms: "Terms of Service",
       wa_float_msg: "Hi HC Cleaning, I would like to request a site visit and quotation.",
       wa_greeting: "Hi HC Cleaning, I would like to request a corporate quotation.", wa_name: "Name / Role:", wa_company: "Company:", wa_contact: "Contact:", wa_service: "Service Needed:",
-      chat_header: "HC Assistant &#128519", chat_welcome: "Hello! Welcome to HC Cleaning Services. How can I assist you today?", chat_placeholder: "Type a message...", chat_send: "Send", chat_typing: "Typing...", chat_err_sys: "System error. Please call 03-40438599.", chat_err_net: "Network error. Please try again."
+      chat_header: "HC Assistant &#128519", chat_welcome: "Hello! Welcome to HC Cleaning Services. How can I assist you today?", chat_placeholder: "Type a message...", chat_send: "Send", chat_typing: "Typing...", chat_err_sys: "System error. Please call 03-40438599.", chat_err_net: "Network error. Please try again.",
+      faq_title: "Frequently Asked Questions", faq_q1: "Are your cleaners legally employed and fully insured?", faq_a1: "Yes. With an operational workforce of over 300 dedicated personnel, we strictly comply with Malaysia’s labor laws. All our cleaners hold valid permits, are fully covered by SOCSO and CIDB, and undergo continuous training under our ISO 9001:2015 Quality Management System.", faq_q2: "Do you provide your own cleaning machinery and chemicals?", faq_a2: "Absolutely. We supply commercial-grade machinery, including UK-imported Numatic extractors and Virco high-speed burnishers. We also provide all necessary standardized chemicals (e.g., 3M Polish, Wax Strippers) accompanied by Material Safety Data Sheets (MSDS) to comply with stringent ESG and safety standards.", faq_q3: "How much does a commercial cleaning contract usually cost?", faq_a3: "Contract pricing depends on property size and required headcount. For ISO-certified B2B cleaning, our transparent quotation typically reflects direct labor costs (approx. RM 2,500 - RM 3,500 per headcount monthly, covering minimum wage, EPF, SOCSO, and Levy), plus the amortization of heavy machinery. We do not engage in price wars; instead, we guarantee audit-ready standards and zero hidden charges.", faq_q4: "What is your response time for emergencies or ad-hoc issues?", faq_a4: "HC Cleaning operates with a highly experienced management team. Our Operation Manager (38 years experience) and Area Supervisors (averaging 15-30 years of experience) monitor specific zones daily. We guarantee a prompt response to any complaints or emergency ad-hoc cleaning requests within the Klang Valley.", acc_title: "Accessibility Options", acc_text: "Large Text", acc_contrast: "High Contrast", acc_links: "Highlight Links"
     },
     ms: {
-      nav_heritage: "Warisan Kami", nav_services: "Perkhidmatan", nav_awards: "Anugerah", nav_quote: "Minta Sebut Harga",
+      nav_heritage: "Warisan Kami", nav_services: "Perkhidmatan", nav_awards: "Anugerah", nav_faq: "Soalan Lazim", nav_quote: "Minta Sebut Harga",
       hero_eyebrow: "Syarikat Disahkan ISO 9001:2015",
       hero_title: "Pengurusan Fasiliti<br>Utama Malaysia<br><em>Sejak-1986.</em>",
       hero_desc: "Memperkasakan menara komersial ikonik, kondominium mewah, dan gedung beli-belah terkemuka di sekitar Lembah Klang dengan persekitaran yang bersih dan menepati piawaian audit selama hampir 40 tahun.",
@@ -66,14 +67,14 @@
       pl_name: "Cth: En. Tan - Pengurus Hartanah", pl_company: "Cth: Pavilion JMB", pl_phone: "01X-XXX XXXX",
       opt_1: "Pembersihan Kontrak Komersial", opt_2: "Penyelenggaraan Kondominium", opt_3: "Pengekstrakan Permaidani / Upholsteri", opt_4: "Pembersihan Fasad / Peringkat Tinggi", opt_5: "Landskap & Berkebun",
       dl_title: "Muat Turun Profil", dl_desc: "Sila masukkan butiran anda untuk mengakses profil dan portfolio syarikat penuh 60 muka surat kami.",
-      pl_dl_name: "Nama / Jawatan Anda", pl_dl_company: "Nama Syarikat / Hartanah", pl_dl_email: "E-mel Perniagaan", dl_btn: "Dapatkan Fail PDF", dl_success: "✓ Pengesahan berjaya! PDF akan dimuat turun sebentar lagi...",
-      footer_sub: "Anak Syarikat: HTC Ecoresources Sdn Bhd | Friendly Eco Services Sdn Bhd", footer_copy: "© 2026 Hak Cipta Terpelihara. Disahkan ISO 9001:2015.",
+      pl_dl_name: "Nama / Jawatan Anda", pl_dl_company: "Nama Syarikat / Hartanah", pl_dl_email: "E-mel Perniagaan", dl_btn: "Dapatkan Fail PDF", dl_pdpa: "Dengan menyerahkan borang ini, anda bersetuju dengan Dasar Privasi kami mengenai penyimpanan butiran hubungan anda.", dl_success: "✓ Pengesahan berjaya! PDF akan dimuat turun sebentar lagi...",
+      footer_sub: "Anak Syarikat: HTC Ecoresources Sdn Bhd | Friendly Eco Services Sdn Bhd", footer_copy: "© 2026 Hak Cipta Terpelihara. Disahkan ISO 9001:2015.", footer_privacy: "Dasar Privasi", footer_terms: "Terma Perkhidmatan",
       wa_float_msg: "Hai HC Cleaning, saya ingin meminta lawatan tapak dan sebut harga.",
       wa_greeting: "Hai HC Cleaning, saya ingin meminta sebut harga korporat.", wa_name: "Nama / Peranan:", wa_company: "Syarikat:", wa_contact: "Hubungi:", wa_service: "Perkhidmatan:",
-      chat_header: "Pembantu HC &#128519", chat_welcome: "Hai! Selamat datang ke HC Cleaning Services. Bagaimana saya boleh membantu anda?", chat_placeholder: "Taip mesej...", chat_send: "Hantar", chat_typing: "Menaip...", chat_err_sys: "Ralat sistem. Sila hubungi 03-40438599.", chat_err_net: "Ralat rangkaian. Sila cuba lagi."
+      chat_header: "Pembantu HC &#128519", chat_welcome: "Hai! Selamat datang ke HC Cleaning Services. Bagaimana saya boleh membantu anda?", chat_placeholder: "Taip mesej...", chat_send: "Hantar", chat_typing: "Menaip...", chat_err_sys: "Ralat sistem. Sila hubungi 03-40438599.", chat_err_net: "Ralat rangkaian. Sila cuba lagi.", faq_title: "Soalan Lazim", faq_q1: "Adakah pekerja pembersihan anda digaji secara sah dan dilindungi insurans sepenuhnya?", faq_a1: "Ya. Dengan tenaga kerja operasi lebih 300 kakitangan, kami mematuhi undang-undang buruh Malaysia dengan ketat. Semua pekerja kami memegang permit sah, dilindungi sepenuhnya oleh PERKESO dan CIDB, serta menjalani latihan berterusan di bawah Sistem Pengurusan Kualiti ISO 9001:2015 kami.", faq_q2: "Adakah anda menyediakan jentera dan bahan kimia pembersihan anda sendiri?", faq_a2: "Sudah tentu. Kami membekalkan jentera gred komersial, termasuk pengekstrak Numatic yang diimport dari UK dan penggilap kelajuan tinggi Virco. Kami juga menyediakan semua bahan kimia piawai (cth., 3M Polish, Wax Strippers) berserta dengan Helaian Data Keselamatan Bahan (MSDS) untuk mematuhi piawaian ESG dan keselamatan yang ketat.", faq_q3: "Berapakah biasanya kos kontrak pembersihan komersial?", faq_a3: "Harga kontrak bergantung kepada saiz hartanah dan jumlah pekerja yang diperlukan. Untuk pembersihan B2B yang disahkan ISO, sebut harga telus kami biasanya mencerminkan kos buruh langsung (anggaran RM 2,500 - RM 3,500 setiap pekerja sebulan, meliputi gaji minimum, KWSP, PERKESO, dan Levi), ditambah dengan pelunasan mesin berat. Kami tidak terlibat dalam perang harga; sebaliknya, kami menjamin standard sedia audit dan sifar caj tersembunyi.", faq_q4: "Berapakah masa tindak balas anda untuk kecemasan atau isu ad-hoc?", faq_a4: "HC Cleaning beroperasi dengan pasukan pengurusan yang sangat berpengalaman. Pengurus Operasi kami (pengalaman 38 tahun) dan Penyelia Kawasan (purata pengalaman 15-30 tahun) memantau zon khusus setiap hari. Kami menjamin tindak balas segera kepada sebarang aduan atau permintaan pembersihan ad-hoc kecemasan di sekitar Lembah Klang.", acc_title: "Pilihan Aksesibiliti", acc_text: "Teks Besar", acc_contrast: "Kontras Tinggi", acc_links: "Serlahkan Pautan"
     },
     zh: {
-      nav_heritage: "关于我们", nav_services: "服务项目", nav_awards: "荣誉奖项", nav_quote: "获取报价",
+      nav_heritage: "关于我们", nav_services: "服务项目", nav_awards: "荣誉奖项", nav_faq: "常见问题", nav_quote: "获取报价",
       hero_eyebrow: "ISO 9001:2015 认证企业",
       hero_title: "马来西亚<br>首屈一指的<br>设施管理公司<br><em>始于 1986 年</em>",
       hero_desc: "近40年来，我们致力于为巴生谷的标志性商业大楼、豪华公寓及顶级百货公司提供符合严格审计标准的一流保洁与环境维护服务。",
@@ -101,11 +102,11 @@
       pl_name: "例如: 陈先生 - 物业经理", pl_company: "例如: 柏威年 JMB", pl_phone: "01X-XXX XXXX",
       opt_1: "商业外包保洁", opt_2: "高级公寓维护", opt_3: "地毯 / 沙发深度清洗", opt_4: "高空 / 外墙清洗作业", opt_5: "园林绿化与园艺",
       dl_title: "下载公司简介", dl_desc: "请输入您的详情，以获取我们完整的60页公司简介及项目记录。",
-      pl_dl_name: "您的姓名 / 职务", pl_dl_company: "公司 / 物业名称", pl_dl_email: "工作邮箱", dl_btn: "获取 PDF 文件", dl_success: "✓ 验证成功！PDF文件即将开始下载...",
-      footer_sub: "旗下子公司：HTC Ecoresources Sdn Bhd | Friendly Eco Services Sdn Bhd", footer_copy: "© 2026 版权所有。ISO 9001:2015 认证企业。",
+      pl_dl_name: "您的姓名 / 职务", pl_dl_company: "公司 / 物业名称", pl_dl_email: "工作邮箱", dl_btn: "获取 PDF 文件", dl_pdpa: "提交即表示您同意我们关于存储您联系方式的隐私政策。", dl_success: "✓ 验证成功！PDF文件即将开始下载...",
+      footer_sub: "旗下子公司：HTC Ecoresources Sdn Bhd | Friendly Eco Services Sdn Bhd", footer_copy: "© 2026 版权所有。ISO 9001:2015 认证企业。", footer_privacy: "隐私政策", footer_terms: "服务条款",
       wa_float_msg: "您好 HC Cleaning，我希望能预约一次实地考察并获取报价。",
       wa_greeting: "您好 HC Cleaning，我想获取一份企业服务报价。", wa_name: "姓名/职务：", wa_company: "公司名称：", wa_contact: "联系电话：", wa_service: "所需服务：",
-      chat_header: "HC 智能客服 &#128519", chat_welcome: "您好！欢迎联系 HC Cleaning Services。请问有什么我可以帮您？", chat_placeholder: "请输入您的消息...", chat_send: "发送", chat_typing: "正在输入...", chat_err_sys: "系统错误，请致电 03-40438599。", chat_err_net: "网络错误，请重试。"
+      chat_header: "HC 智能客服 &#128519", chat_welcome: "您好！欢迎联系 HC Cleaning Services。请问有什么我可以帮您？", chat_placeholder: "请输入您的消息...", chat_send: "发送", chat_typing: "正在输入...", chat_err_sys: "系统错误，请致电 03-40438599。", chat_err_net: "网络错误，请重试。", faq_title: "常见问题解答", faq_q1: "贵公司的清洁员工是否合法受雇且享有全额保险？", faq_a1: "是的。我们拥有超过 300 名运营人员，严格遵守马来西亚劳工法。所有清洁工均持有合法准证，享有 SOCSO 和 CIDB 的全面保障，并在我们的 ISO 9001:2015 质量管理体系下接受持续培训。", faq_q2: "你们提供自己的清洁机械和化学品吗？", faq_a2: "绝对提供。我们供应商业级机械，包括英国进口的 Numatic 抽洗机和 Virco 高速抛光机。我们还提供所有必要的标准化化学品（例如，3M 抛光剂、起蜡水），并附带材料安全数据表（MSDS），以符合严格的 ESG 和安全标准。", faq_q3: "商业清洁合约通常需要多少费用？", faq_a3: "合约价格取决于物业面积和所需人数。对于通过 ISO 认证的 B2B 清洁服务，我们透明的报价通常反映直接劳动力成本（按每月每人约 RM 2,500 - RM 3,500 计算，涵盖最低工资、EPF、SOCSO 和外劳人头税），再加上重型机械的折旧。我们不参与价格战；相反，我们保证符合审计标准，绝无隐形收费。", faq_q4: "对于紧急或临时问题，你们的响应时间是多长？", faq_a4: "HC Cleaning 拥有一支经验丰富的管理团队。我们的运营经理（38年经验）和区域主管（平均15-30年经验）每天监控特定区域。我们保证对巴生谷范围内的任何投诉或紧急临时清洁请求做出迅速响应。", acc_title: "无障碍选项", acc_text: "放大字体", acc_contrast: "高对比度", acc_links: "高亮链接"
     }
   };
 
@@ -326,4 +327,20 @@
   function closeMobileMenu() {
       if (navLinks) navLinks.classList.remove('show-mobile');
       if (hamburger) hamburger.style.transform = 'rotate(0deg)';
+  }
+  // FAQ Accordion
+  function toggleFaq(el) {
+    const item = el.parentElement;
+    // Optional: close other open items
+    // document.querySelectorAll('.faq-item').forEach(i => { if(i !== item) i.classList.remove('active'); });
+    item.classList.toggle('active');
+  }
+
+  // Accessibility Panel
+  function toggleAccessPanel() {
+    document.getElementById('accessPanel').classList.toggle('show');
+  }
+  function toggleAccessClass(className) {
+    document.body.classList.toggle(className);
+    event.target.classList.toggle('active');
   }

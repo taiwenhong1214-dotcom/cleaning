@@ -31,6 +31,7 @@
       <li><a href="#about" onclick="closeMobileMenu()" data-i18n="nav_heritage">Our Heritage</a></li>
       <li><a href="#services" onclick="closeMobileMenu()" data-i18n="nav_services">Services</a></li>
       <li><a href="#awards" onclick="closeMobileMenu()" data-i18n="nav_awards">Awards</a></li>
+      <li><a href="#faq" onclick="closeMobileMenu()" data-i18n="nav_faq">FAQ</a></li>
       <li><a href="#quote" class="nav-cta" onclick="closeMobileMenu()" data-i18n="nav_quote">Request Quotation</a></li>
     </ul>
 
@@ -190,6 +191,9 @@
   </div>
 </section>
 
+
+
+
 <!-- BEFORE AND AFTER -->
 <section class="services-bg">
   <div class="ba-layout">
@@ -254,7 +258,29 @@
         </div>
       </div>
       
-      <div style="margin-top: 40px; border-radius: 8px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+      
+        <div class="faq-section" style="margin-top: 40px;" id="faq">
+          <h3 style="font-family: 'Playfair Display', serif; color: var(--gold); font-size: 22px; margin-bottom: 20px;" data-i18n="faq_title">Frequently Asked Questions</h3>
+          
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)" data-i18n="faq_q1">Are your cleaners legally employed and fully insured?</div>
+            <div class="faq-a" data-i18n="faq_a1">Yes. With an operational workforce of over 300 dedicated personnel, we strictly comply with Malaysia’s labor laws. All our cleaners hold valid permits, are fully covered by SOCSO and CIDB, and undergo continuous training under our ISO 9001:2015 Quality Management System.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)" data-i18n="faq_q2">Do you provide your own cleaning machinery and chemicals?</div>
+            <div class="faq-a" data-i18n="faq_a2">Absolutely. We supply commercial-grade machinery, including UK-imported Numatic extractors and Virco high-speed burnishers. We also provide all necessary standardized chemicals (e.g., 3M Polish, Wax Strippers) accompanied by Material Safety Data Sheets (MSDS) to comply with stringent ESG and safety standards.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)" data-i18n="faq_q3">How much does a commercial cleaning contract usually cost?</div>
+            <div class="faq-a" data-i18n="faq_a3">Contract pricing depends on property size and required headcount. For ISO-certified B2B cleaning, our transparent quotation typically reflects direct labor costs (approx. RM 2,500 - RM 3,500 per headcount monthly, covering minimum wage, EPF, SOCSO, and Levy), plus the amortization of heavy machinery. We do not engage in price wars; instead, we guarantee audit-ready standards and zero hidden charges.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)" data-i18n="faq_q4">What is your response time for emergencies or ad-hoc issues?</div>
+            <div class="faq-a" data-i18n="faq_a4">HC Cleaning operates with a highly experienced management team. Our Operation Manager (38 years experience) and Area Supervisors (averaging 15-30 years of experience) monitor specific zones daily. We guarantee a prompt response to any complaints or emergency ad-hoc cleaning requests within the Klang Valley.</div>
+          </div>
+        </div>
+
+        <div style="margin-top: 40px; border-radius: 8px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
         <iframe src="https://maps.google.com/maps?q=Plaza%20Pengkalan,%20Jalan%20Sultan%20Azlan%20Shah,%20Kuala%20Lumpur&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="280" style="border:0; display: block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>      
       </div>
     </div>
@@ -299,6 +325,7 @@
       <input type="text" id="dlName" name="dlName" data-i18n-placeholder="pl_dl_name" placeholder="Your Name / Designation" required>
       <input type="text" id="dlCompany" name="dlCompany" data-i18n-placeholder="pl_dl_company" placeholder="Company / Property Name" required>
       <input type="email" id="dlEmail" name="dlEmail" data-i18n-placeholder="pl_dl_email" placeholder="Business Email" required>
+      <p style="font-size: 11px; color: var(--white-dim); margin-bottom: 15px;" data-i18n="dl_pdpa">By submitting, you agree to our Privacy Policy regarding the storage of your contact details.</p>
       <button type="submit" class="submit-btn" style="margin-top: 5px;" data-i18n="dl_btn">Get PDF File</button>
     </form>
     <div id="dlSuccess" style="display:none; color: #25D366; margin-top:15px; font-size: 13px; font-weight: bold; text-align: center;" data-i18n="dl_success">
@@ -317,7 +344,11 @@
 <footer>
   <p><strong>HC CLEANING SERVICES SDN BHD (399404-K)</strong></p>
   <p data-i18n="footer_sub">Subsidiaries: HTC Ecoresources Sdn Bhd | Friendly Eco Services Sdn Bhd</p>
-  <p style="margin-top: 15px; opacity: 0.5;" data-i18n="footer_copy">© 2026 All Rights Reserved. ISO 9001:2015 Certified.</p>
+  <p style="margin-top: 15px; opacity: 0.5;">
+    <span data-i18n="footer_copy">© 2026 All Rights Reserved. ISO 9001:2015 Certified.</span> | 
+    <a href="privacy.html" style="color: inherit; text-decoration: underline;" data-i18n="footer_privacy">Privacy Policy</a> | 
+    <a href="terms.html" style="color: inherit; text-decoration: underline;" data-i18n="footer_terms">Terms of Service</a>
+  </p>
 </footer>
 
 <!-- WHATSAPP FLOAT -->
@@ -344,6 +375,16 @@
     <button onclick="sendMessage()" style="background: var(--gold); color: var(--navy); border: none; padding: 0 15px; border-radius: 4px; cursor: pointer; font-weight: bold;" data-i18n="chat_send">Send</button>
   </div>
 </div>
+
+
+<!-- ACCESSIBILITY MENU -->
+<div class="access-panel" id="accessPanel">
+  <h4 data-i18n="acc_title">Accessibility Options</h4>
+  <button onclick="toggleAccessClass('large-text')" data-i18n="acc_text">Large Text</button>
+  <button onclick="toggleAccessClass('high-contrast')" data-i18n="acc_contrast">High Contrast</button>
+  <button onclick="toggleAccessClass('highlight-links')" data-i18n="acc_links">Highlight Links</button>
+</div>
+<button class="access-btn" onclick="toggleAccessPanel()">&#9855;</button>
 
 <!-- SCRIPTS -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
