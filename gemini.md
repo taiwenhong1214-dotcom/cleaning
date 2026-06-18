@@ -1,0 +1,4 @@
+作为一名前端开发专家，请帮我优化以下这端网站代码。我需要你执行以下三个关键任务：
+代码分离：目前 HTML、CSS (在 <style> 中) 和 JS (在 <script> 中) 都写在同一个文件里。请帮我将它们拆分成三个独立的文件：index.html、style.css 和 script.js，并在 HTML 中正确引入。
+引入 AOS 滚动动画：请通过 CDN 引入 AOS (Animate On Scroll) 库（包含 CSS 和 JS 初始化），并为我的主要区块（如 .hero-content, .hero-stats, .about-grid, .service-card, .awards-grid 等）添加合适的 data-aos="fade-up" 动画属性。对于 .service-card 这种网格列表，请使用 data-aos-delay 做出阶梯式出现的视觉效果。
+修复表单线索流失：找到 submitProfileForm 函数和对应的下载弹窗表单（id="profileModal"）。请用原生 JavaScript 的 fetch API 重写该逻辑，接入免费的 Formspree 服务（使用 URL 占位符 https://formspree.io/f/YOUR_FORM_ID 即可）。逻辑要求：阻止表单默认提交 -> 收集用户输入的数据 -> POST 发送给 Formspree -> 成功后显示 dlSuccess 提示 -> 延迟 2 秒后使用 window.open 或 location.href 跳转到现有的 Google Drive 链接。为 dlName, dlCompany, dlEmail 加上 name 属性以便后端接收。
