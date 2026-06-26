@@ -110,7 +110,8 @@ export default async function handler(req, res) {
             body: JSON.stringify({
                 models: modelsToTry,
                 messages: apiMessages,
-                temperature: 0.7
+                temperature: 0.7,
+                stream: true
             })
         });
 
@@ -126,19 +127,28 @@ export default async function handler(req, res) {
             });
         }
 
-        const data = await response.json();
-        console.log('✅ [DEBUG] Got valid response from OpenRouter');
+        console.log('✅ [DEBUG] Streaming response from OpenRouter');
 
-        if (!data.choices || data.choices.length === 0) {
-            console.error('❌ [DEBUG] No choices in response:', JSON.stringify(data).substring(0, 500));
-            return res.status(500).json({ error: 'AI 返回数据异常' });
+        res.setHeader('Content-Type', 'text/event-stream');
+        res.setHeader('Cache-Control', 'no-cache');
+        res.setHeader('Connection', 'keep-alive');
+        if (res.flushHeaders) res.flushHeaders();
+
+        if (response.body.getReader) {
+            const reader = response.body.getReader();
+            const decoder = new TextDecoder("utf-8");
+            while (true) {
+                const { done, value } = await reader.read();
+                if (done) break;
+                res.write(decoder.decode(value));
+            }
+        } else {
+            // Fallback for Node-style streams
+            for await (const chunk of response.body) {
+                res.write(chunk);
+            }
         }
-
-        const reply = data.choices[0].message?.content || '';
-        console.log('💬 [DEBUG] Reply preview:', reply.substring(0, 100));
-
-        // Send back the full response (original behavior)
-        res.status(200).json(data);
+        res.end();
 
     } catch (error) {
         console.error('🔥 [DEBUG] Fetch error:', error.message);

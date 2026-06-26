@@ -183,15 +183,47 @@
               body: JSON.stringify({ messages: conversationHistory })
           });
 
-          const data = await response.json();
-          document.getElementById(typingId).remove();
+          if (!response.ok) throw new Error("Network response was not ok");
 
-          if (data.choices && data.choices.length > 0) {
-              const botReply = data.choices[0].message.content;
+          const typingEl = document.getElementById(typingId);
+          if (typingEl) typingEl.innerHTML = '';
+
+          const reader = response.body.getReader();
+          const decoder = new TextDecoder("utf-8");
+          let botReply = '';
+          let buffer = '';
+
+          while (true) {
+              const { done, value } = await reader.read();
+              if (done) break;
+              
+              buffer += decoder.decode(value, { stream: true });
+              const lines = buffer.split('\n');
+              buffer = lines.pop();
+              
+              for (const line of lines) {
+                  const trimmedLine = line.trim();
+                  if (trimmedLine.startsWith('data: ') && trimmedLine !== 'data: [DONE]') {
+                      try {
+                          const dataObj = JSON.parse(trimmedLine.substring(6));
+                          const delta = dataObj.choices?.[0]?.delta?.content || '';
+                          if (delta) {
+                              botReply += delta;
+                              if (typingEl) typingEl.innerHTML = botReply.replace(/\n/g, '<br>');
+                              const chatContent = document.getElementById('chat-content');
+                              chatContent.scrollTop = chatContent.scrollHeight;
+                          }
+                      } catch (e) {
+                          // ignore partial chunk parsing errors
+                      }
+                  }
+              }
+          }
+
+          if (botReply) {
               conversationHistory.push({ "role": "assistant", "content": botReply });
-              addMessageToChat(botReply, 'bot-message');
           } else {
-              addMessageToChat(translations[currentLang].chat_err_sys, 'bot-message');
+              if (typingEl) typingEl.innerHTML = translations[currentLang].chat_err_sys;
           }
       } catch (error) {
           console.error("API Error:", error);
