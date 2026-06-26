@@ -235,7 +235,7 @@
   function addMessageToChat(text, className) {
       const chatContent = document.getElementById('chat-content');
       const messageDiv = document.createElement('div');
-      const msgId = 'msg-' + Date.now();
+      const msgId = 'msg-' + Date.now() + '-' + Math.floor(Math.random() * 10000);
       messageDiv.id = msgId;
       messageDiv.className = 'message ' + className;
       messageDiv.innerHTML = text; // 改为 innerHTML 适配可能存在的标签
