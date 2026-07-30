@@ -136,7 +136,7 @@
     // 动态更新 WhatsApp 悬浮按钮链接
     const floatWa = document.getElementById('floatWaLink');
     if (floatWa && t.wa_float_msg) {
-      floatWa.href = `https://api.whatsapp.com/send?phone=60122911406&text=${encodeURIComponent(t.wa_float_msg)}`;
+      floatWa.href = `https://api.whatsapp.com/send?phone=60194008021&text=${encodeURIComponent(t.wa_float_msg)}`;
     }
     
     const navMenu = document.getElementById('navLinks');
@@ -343,7 +343,7 @@
     message += "📞 *" + t.wa_contact + "* " + phone + "%0A";
     message += "🛠 *" + t.wa_service + "* " + service; 
     
-    window.open("https://api.whatsapp.com/send?phone=60122911406&text=" + message, '_blank');
+    window.open("https://api.whatsapp.com/send?phone=60194008021&text=" + message, '_blank');
   }
 
   // Hamburger Menu
