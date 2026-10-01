@@ -94,9 +94,7 @@ export default async function handler(req, res) {
     try {
         console.log('🌐 [DEBUG] Sending request to OpenRouter...');
         const modelsToTry = [
-            "openai/gpt-oss-120b:free",
-            "anthropic/claude-opus-4.8:fast",  
-            "openai/gpt-5.4-nano"
+            "stealth/space-bunny-alpha"
         ];
         console.log('🔄 [DEBUG] Models to try:', modelsToTry);
 
