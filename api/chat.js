@@ -1,41 +1,25 @@
 // api/chat.js
 export default async function handler(req, res) {
-    console.log('🚀 [DEBUG] Function invoked, method:', req.method);
-
     // 1. Restrict to POST requests only
     if (req.method !== 'POST') {
-        console.log('❌ [DEBUG] Rejected non-POST request');
         return res.status(405).json({ error: 'Method Not Allowed' });
     }
 
-    // 🔑 关键：打印所有环境变量名（只打名字，不打值）
-    console.log('📋 [DEBUG] Available env keys:', Object.keys(process.env).filter(k => k.includes('OPENROUTER') || k.includes('API')));
-
-    // 尝试多个可能的变量名
+    // 2. Resolve API key from environment
     const apiKey = process.env.OPENROUTER_API_KEY
         || process.env.OPENROUTER_API_KEY3
         || process.env.OPENROUTER_API_KEY2;
 
     if (!apiKey) {
-        console.error('🔥 [DEBUG] No OpenRouter API Key found in env vars!');
-        console.error('   Checked: OPENROUTER_API_KEY, OPENROUTER_API_KEY3, OPENROUTER_API_KEY2');
         return res.status(500).json({
-            error: 'API key not configured. Check Vercel environment variables.',
-            debug: 'Missing OPENROUTER_API_KEY'
+            error: 'API key not configured. Check Vercel environment variables.'
         });
     }
 
-    console.log('✅ [DEBUG] API Key found, length:', apiKey.length);
-
-    // 2. Safely extract messages (prevents crash if req.body is empty)
+    // 3. Safely extract messages (prevents crash if req.body is empty)
     const messages = req.body?.messages || [];
-    console.log('📥 [DEBUG] Received messages count:', messages.length);
-    if (messages.length > 0) {
-        const lastMsg = messages[messages.length - 1];
-        console.log('📥 [DEBUG] Last user message:', lastMsg.content?.substring);
-    }
 
-    // 3. System Prompt (Hidden safely on the backend)
+    // 4. System Prompt (Hidden safely on the backend)
     const systemPrompt = {
         role: "system",
         content: `You are a professional, polite, and highly knowledgeable Customer Service Representative for HC CLEANING SERVICES SDN BHD.
@@ -90,43 +74,31 @@ export default async function handler(req, res) {
 
     // Combine system prompt with user's conversation history
     const apiMessages = [systemPrompt, ...messages];
-    console.log('📨 [DEBUG] Total messages to API:', apiMessages.length, '(system + user history)');
 
     try {
-        console.log('🌐 [DEBUG] Sending request to OpenRouter...');
-        const modelsToTry = [
-            "stealth/space-bunny-alpha"
-        ];
-        console.log('🔄 [DEBUG] Models to try:', modelsToTry);
-
         const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': `Bearer ${apiKey}`,
-                "HTTP-Referer": "https://vercel.com"
+                "HTTP-Referer": "https://hc-cleaning-services.com"
             },
             body: JSON.stringify({
-                models: modelsToTry,
+                models: ["stealth/space-bunny-alpha"],
                 messages: apiMessages,
                 temperature: 0.7,
                 stream: true
             })
         });
 
-        console.log('📡 [DEBUG] OpenRouter response status:', response.status);
-
         // Handle OpenRouter API errors
         if (!response.ok) {
             const errorText = await response.text();
-            console.error('❌ [DEBUG] OpenRouter error body:', errorText);
+            console.error('OpenRouter API error:', response.status);
             return res.status(response.status).json({
-                error: 'Upstream AI provider error',
-                debug: `Status ${response.status}: ${errorText.substring(0, 200)}`
+                error: 'Upstream AI provider error'
             });
         }
-
-        console.log('✅ [DEBUG] Streaming response from OpenRouter');
 
         res.setHeader('Content-Type', 'text/event-stream');
         res.setHeader('Cache-Control', 'no-cache');
@@ -150,11 +122,9 @@ export default async function handler(req, res) {
         res.end();
 
     } catch (error) {
-        console.error('🔥 [DEBUG] Fetch error:', error.message);
-        console.error('🔥 [DEBUG] Error stack:', error.stack);
+        console.error('Chat API error:', error.message);
         res.status(500).json({
-            error: 'Failed to communicate with AI provider',
-            debug: error.message
+            error: 'Failed to communicate with AI provider'
         });
     }
 }

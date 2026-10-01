@@ -233,3 +233,187 @@
   .faq-item.active .faq-q::after { content: '\2212'; transform: rotate(180deg); }
   .faq-a { padding: 0 20px; max-height: 0; font-size: 13px; color: var(--white-dim); transition: all 0.4s ease; opacity: 0; line-height: 1.6; }
   .faq-item.active .faq-a { padding: 0 20px 20px; max-height: 500px; opacity: 1; }
+
+  /* ── HERO SHIMMER OVERLAY ── */
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(212,175,55,0.04) 0%, transparent 40%, rgba(212,175,55,0.07) 70%, transparent 100%);
+    animation: heroShimmer 8s ease-in-out infinite alternate;
+    z-index: 1;
+    pointer-events: none;
+  }
+  @keyframes heroShimmer {
+    0% { opacity: 0.3; }
+    100% { opacity: 1; }
+  }
+
+  /* ── BUTTON SECONDARY ── */
+  .btn-secondary {
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    padding: 16px 36px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s;
+    z-index: 2;
+    position: relative;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .btn-secondary:hover { background: var(--gold-dim); }
+  .btn-secondary:active { transform: scale(0.95); }
+
+  /* ── TESTIMONIALS ── */
+  .testimonials-section { background: var(--navy); border-top: 1px solid var(--border); }
+  .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+  .testimonial-card {
+    background: var(--navy-mid);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 40px 30px;
+    position: relative;
+    transition: transform 0.3s, border-color 0.3s;
+  }
+  .testimonial-card:hover { transform: translateY(-5px); border-color: var(--gold); }
+  .testimonial-quote {
+    font-family: 'Playfair Display', serif;
+    font-size: 60px;
+    color: var(--gold);
+    line-height: 1;
+    opacity: 0.25;
+    position: absolute;
+    top: 15px;
+    left: 25px;
+  }
+  .testimonial-text {
+    font-size: 15px;
+    color: var(--white-dim);
+    line-height: 1.8;
+    margin-bottom: 25px;
+    font-style: italic;
+    position: relative;
+    z-index: 1;
+  }
+  .testimonial-author { display: flex; align-items: center; gap: 15px; }
+  .testimonial-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--gold-dim);
+    border: 2px solid var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--gold);
+    flex-shrink: 0;
+  }
+  .testimonial-author strong { display: block; font-size: 15px; color: var(--white); }
+  .testimonial-author span { display: block; font-size: 12px; color: var(--gold); margin-top: 3px; }
+
+  /* ── INSIGHTS / BLOG ── */
+  .insights-section { background: var(--navy-mid); }
+  .insights-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .insight-card {
+    background: var(--navy);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 40px 30px;
+    transition: transform 0.3s, border-color 0.3s;
+    display: flex;
+    flex-direction: column;
+  }
+  .insight-card:hover { transform: translateY(-5px); border-color: var(--gold); }
+  .insight-icon { font-size: 36px; margin-bottom: 20px; }
+  .insight-card h3 { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 600; margin-bottom: 15px; line-height: 1.3; }
+  .insight-card p { font-size: 14px; color: var(--white-dim); line-height: 1.7; margin-bottom: 20px; flex-grow: 1; }
+  .insight-link {
+    color: var(--gold);
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: 0.3s;
+    display: inline-block;
+  }
+  .insight-link:hover { color: var(--gold-light); letter-spacing: 0.1em; }
+
+  /* ── BACK TO TOP ── */
+  .back-to-top {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    width: 48px;
+    height: 48px;
+    background: var(--navy-mid);
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    color: var(--gold);
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 9998;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  .back-to-top.visible { opacity: 1; visibility: visible; transform: translateY(0); }
+  .back-to-top:hover { background: var(--gold); color: var(--navy); border-color: var(--gold); transform: translateY(-3px); }
+
+  /* ── COOKIE BANNER ── */
+  .cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--navy-mid);
+    border-top: 1px solid var(--border);
+    padding: 18px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    z-index: 99999;
+    transform: translateY(100%);
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  .cookie-banner.visible { transform: translateY(0); }
+  .cookie-banner p { font-size: 13px; color: var(--white-dim); margin: 0; }
+  .cookie-banner a { color: var(--gold); text-decoration: underline; }
+  .cookie-banner button {
+    background: var(--gold);
+    color: var(--navy);
+    border: none;
+    padding: 10px 28px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 13px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: 0.3s;
+    white-space: nowrap;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .cookie-banner button:hover { background: var(--gold-light); }
+
+  /* ── RESPONSIVE: NEW SECTIONS ── */
+  @media (max-width: 900px) {
+    .testimonials-grid, .insights-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 768px) {
+    .testimonial-card, .insight-card { padding: 30px 20px; }
+    .cookie-banner { flex-direction: column; text-align: center; gap: 12px; padding: 15px 20px; }
+    .back-to-top { bottom: 100px; left: 20px; width: 40px; height: 40px; font-size: 16px; }
+  }

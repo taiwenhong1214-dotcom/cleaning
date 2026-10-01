@@ -36,7 +36,17 @@
       wa_float_msg: "Hi HC Cleaning, I would like to request a site visit and quotation.",
       wa_greeting: "Hi HC Cleaning, I would like to request a corporate quotation.", wa_name: "Name / Role:", wa_company: "Company:", wa_contact: "Contact:", wa_service: "Service Needed:",
       chat_header: "HC Assistant &#128519", chat_welcome: "Hello! Welcome to HC Cleaning Services. How can I assist you today?", chat_placeholder: "Type a message...", chat_send: "Send", chat_typing: "Typing...", chat_err_sys: "System error. Please call 03-40438599.", chat_err_net: "Network error. Please try again.",
-      faq_title: "Frequently Asked Questions", faq_q1: "Are your cleaners legally employed and fully insured?", faq_a1: "Yes. With an operational workforce of over 300 dedicated personnel, we strictly comply with Malaysia’s labor laws. All our cleaners hold valid permits, are fully covered by SOCSO and CIDB, and undergo continuous training under our ISO 9001:2015 Quality Management System.", faq_q2: "Do you provide your own cleaning machinery and chemicals?", faq_a2: "Absolutely. We supply commercial-grade machinery, including UK-imported Numatic extractors and Virco high-speed burnishers. We also provide all necessary standardized chemicals (e.g., 3M Polish, Wax Strippers) accompanied by Material Safety Data Sheets (MSDS) to comply with stringent ESG and safety standards.", faq_q3: "How much does a commercial cleaning contract usually cost?", faq_a3: "Contract pricing depends on property size and required headcount. For ISO-certified B2B cleaning, our transparent quotation typically reflects direct labor costs (approx. RM 2,500 - RM 3,500 per headcount monthly, covering minimum wage, EPF, SOCSO, and Levy), plus the amortization of heavy machinery. We do not engage in price wars; instead, we guarantee audit-ready standards and zero hidden charges.", faq_q4: "What is your response time for emergencies or ad-hoc issues?", faq_a4: "HC Cleaning operates with a highly experienced management team. Our Operation Manager (38 years experience) and Area Supervisors (averaging 15-30 years of experience) monitor specific zones daily. We guarantee a prompt response to any complaints or emergency ad-hoc cleaning requests within the Klang Valley."
+      faq_title: "Frequently Asked Questions", faq_q1: "Are your cleaners legally employed and fully insured?", faq_a1: "Yes. With an operational workforce of over 300 dedicated personnel, we strictly comply with Malaysia’s labor laws. All our cleaners hold valid permits, are fully covered by SOCSO and CIDB, and undergo continuous training under our ISO 9001:2015 Quality Management System.", faq_q2: "Do you provide your own cleaning machinery and chemicals?", faq_a2: "Absolutely. We supply commercial-grade machinery, including UK-imported Numatic extractors and Virco high-speed burnishers. We also provide all necessary standardized chemicals (e.g., 3M Polish, Wax Strippers) accompanied by Material Safety Data Sheets (MSDS) to comply with stringent ESG and safety standards.", faq_q3: "How much does a commercial cleaning contract usually cost?", faq_a3: "Contract pricing depends on property size and required headcount. For ISO-certified B2B cleaning, our transparent quotation typically reflects direct labor costs (approx. RM 2,500 - RM 3,500 per headcount monthly, covering minimum wage, EPF, SOCSO, and Levy), plus the amortization of heavy machinery. We do not engage in price wars; instead, we guarantee audit-ready standards and zero hidden charges.", faq_q4: "What is your response time for emergencies or ad-hoc issues?", faq_a4: "HC Cleaning operates with a highly experienced management team. Our Operation Manager (38 years experience) and Area Supervisors (averaging 15-30 years of experience) monitor specific zones daily. We guarantee a prompt response to any complaints or emergency ad-hoc cleaning requests within the Klang Valley.",
+      testi_label: "What Clients Say", testi_title: "Trusted by Property Managers Across Malaysia.",
+      testi_1_text: "HC Cleaning has maintained our lobby and common areas to 5-star hotel standards for over 8 years. Their team is always punctual, professional, and thorough.", testi_1_name: "Dato' Rahim", testi_1_role: "JMB Chairman, The Avare Condominium",
+      testi_2_text: "Since switching to HC Cleaning, our customer feedback on store cleanliness improved significantly. Their 5-star toilet ratings speak for themselves.", testi_2_name: "Ms. Jennifer Lim", testi_2_role: "Operations Manager, Parkson Pavilion",
+      testi_3_text: "We engaged HC Cleaning for post-renovation cleaning of our new office. The floor crystallization was flawless \u2014 they delivered ahead of schedule.", testi_3_name: "Ir. Suresh Kumar", testi_3_role: "Facility Director, Soka Gakkai Malaysia",
+      insights_label: "Industry Insights", insights_title: "Expert Knowledge & Case Studies",
+      blog_1_title: "How ISO 9001:2015 Cleaners Save JMBs Hidden Costs", blog_1_desc: "Choosing the cheapest contractor often leads to damaged assets and resident complaints. Discover how our rigorous SOPs reduce long-term maintenance costs for luxury condominiums.",
+      blog_2_title: "Commercial Carpet Cleaning: Shampooing vs. Hot Water Extraction", blog_2_desc: "Not all carpet cleaning is equal. Learn why we use industrial-grade Numatic steam extractors to remove deep-seated allergens and extend the lifespan of your corporate carpets.",
+      blog_3_title: "High-Rise Facade Safety: Behind the Scenes at The Avare", blog_3_desc: "Exterior glass cleaning at 40 stories high requires more than just courage. Read our case study on how our certified rope-access technicians execute zero-accident facade washing.",
+      blog_read: "Read More \u2192",
+      cookie_text: "This website uses cookies to enhance your experience. By continuing, you agree to our", cookie_accept: "Accept", cookie_policy: "Privacy Policy"
     },
     ms: {
       nav_heritage: "Warisan Kami", nav_services: "Perkhidmatan", nav_awards: "Anugerah", nav_faq: "Soalan Lazim", nav_quote: "Minta Sebut Harga",
@@ -71,7 +81,17 @@
       footer_sub: "Anak Syarikat: HTC Ecoresources Sdn Bhd | Friendly Eco Services Sdn Bhd", footer_copy: "© 2026 Hak Cipta Terpelihara. Disahkan ISO 9001:2015.", footer_privacy: "Dasar Privasi", footer_terms: "Terma Perkhidmatan",
       wa_float_msg: "Hai HC Cleaning, saya ingin meminta lawatan tapak dan sebut harga.",
       wa_greeting: "Hai HC Cleaning, saya ingin meminta sebut harga korporat.", wa_name: "Nama / Peranan:", wa_company: "Syarikat:", wa_contact: "Hubungi:", wa_service: "Perkhidmatan:",
-      chat_header: "Pembantu HC &#128519", chat_welcome: "Hai! Selamat datang ke HC Cleaning Services. Bagaimana saya boleh membantu anda?", chat_placeholder: "Taip mesej...", chat_send: "Hantar", chat_typing: "Menaip...", chat_err_sys: "Ralat sistem. Sila hubungi 03-40438599.", chat_err_net: "Ralat rangkaian. Sila cuba lagi.", faq_title: "Soalan Lazim", faq_q1: "Adakah pekerja pembersihan anda digaji secara sah dan dilindungi insurans sepenuhnya?", faq_a1: "Ya. Dengan tenaga kerja operasi lebih 300 kakitangan, kami mematuhi undang-undang buruh Malaysia dengan ketat. Semua pekerja kami memegang permit sah, dilindungi sepenuhnya oleh PERKESO dan CIDB, serta menjalani latihan berterusan di bawah Sistem Pengurusan Kualiti ISO 9001:2015 kami.", faq_q2: "Adakah anda menyediakan jentera dan bahan kimia pembersihan anda sendiri?", faq_a2: "Sudah tentu. Kami membekalkan jentera gred komersial, termasuk pengekstrak Numatic yang diimport dari UK dan penggilap kelajuan tinggi Virco. Kami juga menyediakan semua bahan kimia piawai (cth., 3M Polish, Wax Strippers) berserta dengan Helaian Data Keselamatan Bahan (MSDS) untuk mematuhi piawaian ESG dan keselamatan yang ketat.", faq_q3: "Berapakah biasanya kos kontrak pembersihan komersial?", faq_a3: "Harga kontrak bergantung kepada saiz hartanah dan jumlah pekerja yang diperlukan. Untuk pembersihan B2B yang disahkan ISO, sebut harga telus kami biasanya mencerminkan kos buruh langsung (anggaran RM 2,500 - RM 3,500 setiap pekerja sebulan, meliputi gaji minimum, KWSP, PERKESO, dan Levi), ditambah dengan pelunasan mesin berat. Kami tidak terlibat dalam perang harga; sebaliknya, kami menjamin standard sedia audit dan sifar caj tersembunyi.", faq_q4: "Berapakah masa tindak balas anda untuk kecemasan atau isu ad-hoc?", faq_a4: "HC Cleaning beroperasi dengan pasukan pengurusan yang sangat berpengalaman. Pengurus Operasi kami (pengalaman 38 tahun) dan Penyelia Kawasan (purata pengalaman 15-30 tahun) memantau zon khusus setiap hari. Kami menjamin tindak balas segera kepada sebarang aduan atau permintaan pembersihan ad-hoc kecemasan di sekitar Lembah Klang."
+      chat_header: "Pembantu HC &#128519", chat_welcome: "Hai! Selamat datang ke HC Cleaning Services. Bagaimana saya boleh membantu anda?", chat_placeholder: "Taip mesej...", chat_send: "Hantar", chat_typing: "Menaip...", chat_err_sys: "Ralat sistem. Sila hubungi 03-40438599.", chat_err_net: "Ralat rangkaian. Sila cuba lagi.", faq_title: "Soalan Lazim", faq_q1: "Adakah pekerja pembersihan anda digaji secara sah dan dilindungi insurans sepenuhnya?", faq_a1: "Ya. Dengan tenaga kerja operasi lebih 300 kakitangan, kami mematuhi undang-undang buruh Malaysia dengan ketat. Semua pekerja kami memegang permit sah, dilindungi sepenuhnya oleh PERKESO dan CIDB, serta menjalani latihan berterusan di bawah Sistem Pengurusan Kualiti ISO 9001:2015 kami.", faq_q2: "Adakah anda menyediakan jentera dan bahan kimia pembersihan anda sendiri?", faq_a2: "Sudah tentu. Kami membekalkan jentera gred komersial, termasuk pengekstrak Numatic yang diimport dari UK dan penggilap kelajuan tinggi Virco. Kami juga menyediakan semua bahan kimia piawai (cth., 3M Polish, Wax Strippers) berserta dengan Helaian Data Keselamatan Bahan (MSDS) untuk mematuhi piawaian ESG dan keselamatan yang ketat.", faq_q3: "Berapakah biasanya kos kontrak pembersihan komersial?", faq_a3: "Harga kontrak bergantung kepada saiz hartanah dan jumlah pekerja yang diperlukan. Untuk pembersihan B2B yang disahkan ISO, sebut harga telus kami biasanya mencerminkan kos buruh langsung (anggaran RM 2,500 - RM 3,500 setiap pekerja sebulan, meliputi gaji minimum, KWSP, PERKESO, dan Levi), ditambah dengan pelunasan mesin berat. Kami tidak terlibat dalam perang harga; sebaliknya, kami menjamin standard sedia audit dan sifar caj tersembunyi.", faq_q4: "Berapakah masa tindak balas anda untuk kecemasan atau isu ad-hoc?", faq_a4: "HC Cleaning beroperasi dengan pasukan pengurusan yang sangat berpengalaman. Pengurus Operasi kami (pengalaman 38 tahun) dan Penyelia Kawasan (purata pengalaman 15-30 tahun) memantau zon khusus setiap hari. Kami menjamin tindak balas segera kepada sebarang aduan atau permintaan pembersihan ad-hoc kecemasan di sekitar Lembah Klang.",
+      testi_label: "Kata Pelanggan", testi_title: "Dipercayai Pengurus Hartanah Seluruh Malaysia.",
+      testi_1_text: "HC Cleaning telah mengekalkan lobi dan kawasan awam kami pada standard hotel 5 bintang selama lebih 8 tahun. Pasukan mereka sentiasa tepat waktu, profesional, dan teliti.", testi_1_name: "Dato' Rahim", testi_1_role: "Pengerusi JMB, The Avare Condominium",
+      testi_2_text: "Sejak bertukar kepada HC Cleaning, maklum balas pelanggan mengenai kebersihan kedai meningkat dengan ketara. Penarafan tandas 5 bintang mereka membuktikan semuanya.", testi_2_name: "Cik Jennifer Lim", testi_2_role: "Pengurus Operasi, Parkson Pavilion",
+      testi_3_text: "Kami melantik HC Cleaning untuk pembersihan pasca pengubahsuaian pejabat baru kami. Penghabluran lantai adalah sempurna \u2014 mereka menyiapkan lebih awal daripada jadual.", testi_3_name: "Ir. Suresh Kumar", testi_3_role: "Pengarah Fasiliti, Soka Gakkai Malaysia",
+      insights_label: "Artikel Industri", insights_title: "Kepakaran & Kajian Kes",
+      blog_1_title: "Bagaimana Pembersih ISO 9001:2015 Menjimatkan Kos Tersembunyi JMB", blog_1_desc: "Memilih kontraktor paling murah sering membawa kepada kerosakan aset dan aduan penghuni. Ketahui bagaimana SOP ketat kami mengurangkan kos penyelenggaraan jangka panjang untuk kondominium mewah.",
+      blog_2_title: "Pencucian Permaidani Komersial: Syampu vs. Pengekstrakan Air Panas", blog_2_desc: "Tidak semua pencucian permaidani sama. Ketahui mengapa kami menggunakan pengekstrak wap Numatic gred industri untuk membuang alergen dan memanjangkan jangka hayat permaidani korporat anda.",
+      blog_3_title: "Keselamatan Fasad Bangunan Tinggi: Di Sebalik Tabir di The Avare", blog_3_desc: "Pembersihan kaca luaran di ketinggian 40 tingkat memerlukan lebih daripada sekadar keberanian. Baca kajian kes bagaimana juruteknik capaian tali bersijil kami melaksanakan pencucian fasad sifar kemalangan.",
+      blog_read: "Baca Lagi \u2192",
+      cookie_text: "Laman web ini menggunakan kuki untuk meningkatkan pengalaman anda. Dengan meneruskan, anda bersetuju dengan", cookie_accept: "Terima", cookie_policy: "Dasar Privasi"
     },
     zh: {
       nav_heritage: "关于我们", nav_services: "服务项目", nav_awards: "荣誉奖项", nav_faq: "常见问题", nav_quote: "获取报价",
@@ -106,7 +126,17 @@
       footer_sub: "旗下子公司：HTC Ecoresources Sdn Bhd | Friendly Eco Services Sdn Bhd", footer_copy: "© 2026 版权所有。ISO 9001:2015 认证企业。", footer_privacy: "隐私政策", footer_terms: "服务条款",
       wa_float_msg: "您好 HC Cleaning，我希望能预约一次实地考察并获取报价。",
       wa_greeting: "您好 HC Cleaning，我想获取一份企业服务报价。", wa_name: "姓名/职务：", wa_company: "公司名称：", wa_contact: "联系电话：", wa_service: "所需服务：",
-      chat_header: "HC 智能客服 &#128519", chat_welcome: "您好！欢迎联系 HC Cleaning Services。请问有什么我可以帮您？", chat_placeholder: "请输入您的消息...", chat_send: "发送", chat_typing: "正在输入...", chat_err_sys: "系统错误，请致电 03-40438599。", chat_err_net: "网络错误，请重试。", faq_title: "常见问题解答", faq_q1: "贵公司的清洁员工是否合法受雇且享有全额保险？", faq_a1: "是的。我们拥有超过 300 名运营人员，严格遵守马来西亚劳工法。所有清洁工均持有合法准证，享有 SOCSO 和 CIDB 的全面保障，并在我们的 ISO 9001:2015 质量管理体系下接受持续培训。", faq_q2: "你们提供自己的清洁机械和化学品吗？", faq_a2: "绝对提供。我们供应商业级机械，包括英国进口的 Numatic 抽洗机和 Virco 高速抛光机。我们还提供所有必要的标准化化学品（例如，3M 抛光剂、起蜡水），并附带材料安全数据表（MSDS），以符合严格的 ESG 和安全标准。", faq_q3: "商业清洁合约通常需要多少费用？", faq_a3: "合约价格取决于物业面积和所需人数。对于通过 ISO 认证的 B2B 清洁服务，我们透明的报价通常反映直接劳动力成本（按每月每人约 RM 2,500 - RM 3,500 计算，涵盖最低工资、EPF、SOCSO 和外劳人头税），再加上重型机械的折旧。我们不参与价格战；相反，我们保证符合审计标准，绝无隐形收费。", faq_q4: "对于紧急或临时问题，你们的响应时间是多长？", faq_a4: "HC Cleaning 拥有一支经验丰富的管理团队。我们的运营经理（38年经验）和区域主管（平均15-30年经验）每天监控特定区域。我们保证对巴生谷范围内的任何投诉或紧急临时清洁请求做出迅速响应。"
+      chat_header: "HC 智能客服 &#128519", chat_welcome: "您好！欢迎联系 HC Cleaning Services。请问有什么我可以帮您？", chat_placeholder: "请输入您的消息...", chat_send: "发送", chat_typing: "正在输入...", chat_err_sys: "系统错误，请致电 03-40438599。", chat_err_net: "网络错误，请重试。", faq_title: "常见问题解答", faq_q1: "贵公司的清洁员工是否合法受雇且享有全额保险？", faq_a1: "是的。我们拥有超过 300 名运营人员，严格遵守马来西亚劳工法。所有清洁工均持有合法准证，享有 SOCSO 和 CIDB 的全面保障，并在我们的 ISO 9001:2015 质量管理体系下接受持续培训。", faq_q2: "你们提供自己的清洁机械和化学品吗？", faq_a2: "绝对提供。我们供应商业级机械，包括英国进口的 Numatic 抽洗机和 Virco 高速抛光机。我们还提供所有必要的标准化化学品（例如，3M 抛光剂、起蜡水），并附带材料安全数据表（MSDS），以符合严格的 ESG 和安全标准。", faq_q3: "商业清洁合约通常需要多少费用？", faq_a3: "合约价格取决于物业面积和所需人数。对于通过 ISO 认证的 B2B 清洁服务，我们透明的报价通常反映直接劳动力成本（按每月每人约 RM 2,500 - RM 3,500 计算，涵盖最低工资、EPF、SOCSO 和外劳人头税），再加上重型机械的折旧。我们不参与价格战；相反，我们保证符合审计标准，绝无隐形收费。", faq_q4: "对于紧急或临时问题，你们的响应时间是多长？", faq_a4: "HC Cleaning 拥有一支经验丰富的管理团队。我们的运营经理（38年经验）和区域主管（平均15-30年经验）每天监控特定区域。我们保证对巴生谷范围内的任何投诉或紧急临时清洁请求做出迅速响应。",
+      testi_label: "客户评价", testi_title: "深受全马物业经理信赖",
+      testi_1_text: "HC Cleaning 为我们的大堂和公共区域维持了超过8年的五星级酒店标准。他们的团队始终守时、专业且一丝不苟。", testi_1_name: "Dato' Rahim", testi_1_role: "JMB主席，The Avare 公寓",
+      testi_2_text: "自从更换到 HC Cleaning 后，我们商场的清洁度客户反馈显著提升。他们获得的五星级洗手间评级就是最好的证明。", testi_2_name: "Jennifer Lim 女士", testi_2_role: "运营经理，柏威年百盛",
+      testi_3_text: "我们聘请 HC Cleaning 进行新办公室的装修后清洁。地板晶面处理堪称完美——他们提前完成了工期。", testi_3_name: "Ir. Suresh Kumar", testi_3_role: "设施总监，创价学会马来西亚",
+      insights_label: "行业洞察", insights_title: "专业知识与案例分析",
+      blog_1_title: "ISO 9001:2015 认证清洁商如何为JMB节省隐性成本", blog_1_desc: "选择最便宜的承包商往往导致资产损坏和住户投诉。了解我们严格的标准作业程序如何为豪华公寓降低长期维护成本。",
+      blog_2_title: "商业地毯清洁：洗发水 vs. 热水提取", blog_2_desc: "并非所有地毯清洁都一样。了解我们为何使用工业级 Numatic 蒸汽提取器来去除深层过敏原并延长企业地毯的使用寿命。",
+      blog_3_title: "高空外墙安全：The Avare 项目幕后故事", blog_3_desc: "在40层高空清洁外墙玻璃不仅仅需要勇气。阅读我们认证的绳索作业技术人员如何实现零事故外墙清洗的案例分析。",
+      blog_read: "阅读更多 \u2192",
+      cookie_text: "本网站使用 Cookie 以提升您的浏览体验。继续浏览即表示您同意我们的", cookie_accept: "接受", cookie_policy: "隐私政策"
     }
   };
 
@@ -372,4 +402,84 @@
   function toggleAccessClass(className) {
     document.body.classList.toggle(className);
     event.target.classList.toggle('active');
+  }
+
+  /* =======================================
+     🔢 Animated Stat Counters
+     ======================================= */
+  function animateCounters() {
+    const counters = document.querySelectorAll('.stat-num');
+    counters.forEach(counter => {
+      const text = counter.textContent.trim();
+      const match = text.match(/^(\d+)(.*)$/);
+      if (!match) return;
+      const target = parseInt(match[1]);
+      const suffix = match[2];
+      const duration = 2000;
+      const startTime = performance.now();
+
+      function update(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3); // easeOutCubic
+        const current = Math.floor(eased * target);
+        counter.textContent = current + suffix;
+        if (progress < 1) {
+          requestAnimationFrame(update);
+        } else {
+          counter.textContent = target + suffix;
+        }
+      }
+
+      counter.textContent = '0' + suffix;
+      requestAnimationFrame(update);
+    });
+  }
+
+  const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounters();
+        statsObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  const heroStats = document.querySelector('.hero-stats');
+  if (heroStats) statsObserver.observe(heroStats);
+
+  /* =======================================
+     ⬆️ Back to Top Button
+     ======================================= */
+  const backToTopBtn = document.getElementById('backToTop');
+  if (backToTopBtn) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 600) {
+        backToTopBtn.classList.add('visible');
+      } else {
+        backToTopBtn.classList.remove('visible');
+      }
+    });
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  /* =======================================
+     🍪 Cookie Consent
+     ======================================= */
+  function acceptCookies() {
+    localStorage.setItem('hc_cookies_accepted', 'true');
+    const banner = document.getElementById('cookieConsent');
+    if (banner) {
+      banner.classList.remove('visible');
+      setTimeout(() => banner.style.display = 'none', 500);
+    }
+  }
+
+  if (!localStorage.getItem('hc_cookies_accepted')) {
+    const cookieBanner = document.getElementById('cookieConsent');
+    if (cookieBanner) {
+      setTimeout(() => cookieBanner.classList.add('visible'), 1500);
+    }
   }
