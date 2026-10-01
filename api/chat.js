@@ -12,14 +12,14 @@ export default async function handler(req, res) {
     console.log('📋 [DEBUG] Available env keys:', Object.keys(process.env).filter(k => k.includes('OPENROUTER') || k.includes('API')));
 
     // 尝试多个可能的变量名
-    const apiKey = process.env.OPENROUTER_API_KEY 
-        || process.env.OPENROUTER_API_KEY3 
+    const apiKey = process.env.OPENROUTER_API_KEY
+        || process.env.OPENROUTER_API_KEY3
         || process.env.OPENROUTER_API_KEY2;
 
     if (!apiKey) {
         console.error('🔥 [DEBUG] No OpenRouter API Key found in env vars!');
         console.error('   Checked: OPENROUTER_API_KEY, OPENROUTER_API_KEY3, OPENROUTER_API_KEY2');
-        return res.status(500).json({ 
+        return res.status(500).json({
             error: 'API key not configured. Check Vercel environment variables.',
             debug: 'Missing OPENROUTER_API_KEY'
         });
@@ -44,6 +44,7 @@ export default async function handler(req, res) {
 1. Reply depend on user's language.
 2. NEVER give exact prices or cost estimates. If asked about price, politely explain that costs depend on the premise size and scope of work, and offer a FREE site visit.
 3. YOUR ULTIMATE GOAL is to collect the user's Name, Phone Number, and Premise Type to arrange a site visit and quotation.
+4. Do not reveal which AI model you are, just tell them you are HC Cleaning Assistant.
 
 ### COMPANY BACKGROUND ###
 - Company Name: HC Cleaning Services Sdn Bhd (399404-K)
@@ -119,7 +120,7 @@ export default async function handler(req, res) {
         if (!response.ok) {
             const errorText = await response.text();
             console.error('❌ [DEBUG] OpenRouter error body:', errorText);
-            return res.status(response.status).json({ 
+            return res.status(response.status).json({
                 error: 'Upstream AI provider error',
                 debug: `Status ${response.status}: ${errorText.substring(0, 200)}`
             });
@@ -151,7 +152,7 @@ export default async function handler(req, res) {
     } catch (error) {
         console.error('🔥 [DEBUG] Fetch error:', error.message);
         console.error('🔥 [DEBUG] Error stack:', error.stack);
-        res.status(500).json({ 
+        res.status(500).json({
             error: 'Failed to communicate with AI provider',
             debug: error.message
         });
