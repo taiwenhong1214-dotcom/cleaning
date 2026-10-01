@@ -80,7 +80,7 @@
       <option value="zh">中文</option>
     </select>
 
-    <div class="hamburger" id="hamburger">☰</div>
+    <div class="hamburger" id="hamburger" aria-label="Toggle navigation menu" role="button" tabindex="0">☰</div>
   </div>
 </nav>
 
@@ -229,10 +229,47 @@
   </div>
 </section>
 
-
-
-
-
+<!-- TESTIMONIALS -->
+<section class="testimonials-section">
+  <div class="section-label" data-i18n="testi_label">What Clients Say</div>
+  <h2 class="section-title" data-i18n="testi_title">Trusted by Property Managers Across Malaysia.</h2>
+  
+  <div class="testimonials-grid">
+    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="0">
+      <div class="testimonial-quote">"</div>
+      <p class="testimonial-text" data-i18n="testi_1_text">HC Cleaning has maintained our lobby and common areas to 5-star hotel standards for over 8 years. Their team is always punctual, professional, and thorough.</p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">DR</div>
+        <div>
+          <strong data-i18n="testi_1_name">Dato' Rahim</strong>
+          <span data-i18n="testi_1_role">JMB Chairman, The Avare Condominium</span>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+      <div class="testimonial-quote">"</div>
+      <p class="testimonial-text" data-i18n="testi_2_text">Since switching to HC Cleaning, our customer feedback on store cleanliness improved significantly. Their 5-star toilet ratings speak for themselves.</p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">JL</div>
+        <div>
+          <strong data-i18n="testi_2_name">Ms. Jennifer Lim</strong>
+          <span data-i18n="testi_2_role">Operations Manager, Parkson Pavilion</span>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+      <div class="testimonial-quote">"</div>
+      <p class="testimonial-text" data-i18n="testi_3_text">We engaged HC Cleaning for post-renovation cleaning of our new office. The floor crystallization was flawless — they delivered ahead of schedule.</p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">SK</div>
+        <div>
+          <strong data-i18n="testi_3_name">Ir. Suresh Kumar</strong>
+          <span data-i18n="testi_3_role">Facility Director, Soka Gakkai Malaysia</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 <!-- INDUSTRY INSIGHTS -->
 <section class="insights-section" id="insights">
   <div class="section-label" data-i18n="insights_label">Industry Insights</div>
@@ -384,7 +421,7 @@
 <!-- DOWNLOAD PROFILE MODAL -->
 <div id="profileModal" class="modal-overlay">
   <div class="modal-box">
-    <span class="close-modal" onclick="closeProfileModal()">&times;</span>
+    <span class="close-modal" onclick="closeProfileModal()" aria-label="Close modal" role="button" tabindex="0">&times;</span>
     <h3 data-i18n="dl_title">Download Profile</h3>
     <p data-i18n="dl_desc">Please enter your details to access our full 60-page company profile and portfolio.</p>
     <form onsubmit="submitProfileForm(event)">
@@ -402,7 +439,7 @@
 
 <!-- IMAGE ZOOM LIGHTBOX -->
 <div id="imageLightbox" class="lightbox-overlay" onclick="closeLightbox()">
-  <span class="lightbox-close">&times;</span>
+  <span class="lightbox-close" aria-label="Close image zoom" role="button" tabindex="0">&times;</span>
   <img id="lightboxImg" class="lightbox-content" src="" alt="Zoomed View">
 </div>
 
@@ -418,20 +455,20 @@
 </footer>
 
 <!-- WHATSAPP FLOAT -->
-<a id="floatWaLink" href="https://api.whatsapp.com/send?phone=60194008021&text=Hi%20HC%20Cleaning,%20I%20would%20like%20to%20request%20a%20site%20visit%20and%20quotation." class="float-wa" target="_blank" rel="noopener noreferrer">
-  <svg viewBox="0 0 32 32" width="35" height="35" fill="white">
+<a id="floatWaLink" href="https://api.whatsapp.com/send?phone=60194008021&text=Hi%20HC%20Cleaning,%20I%20would%20like%20to%20request%20a%20site%20visit%20and%20quotation." class="float-wa" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+  <svg viewBox="0 0 32 32" width="35" height="35" fill="white" aria-hidden="true">
     <path d="M16 2a13 13 0 0 0-11 20l-2 5 5-2a13 13 0 1 0 8-23zm0 24a11 11 0 0 1-5-1l-3 1 1-3a11 11 0 1 1 7 3zm6-8c-1-1-3-1-3-1s-1 1-1 2c-1 0-4-2-5-4 1 0 2-1 2-2s-1-3-2-3-2 1-2 2c0 2 2 6 5 8 2 2 5 2 6 1s1-2 1-3z"/>
   </svg>
 </a>
 
 <!-- AI CHAT TOGGLE -->
-<div onclick="toggleChat()" class="float-chat">💬</div>
+<div onclick="toggleChat()" class="float-chat" aria-label="Open AI Assistant Chat" role="button" tabindex="0">💬</div>
 
 <!-- AI CHATBOX -->
 <div id="chat-box" class="chat-box-container">
   <div class="chat-header">
     <span data-i18n="chat_header">HC Assistant &#128519</span>
-    <span id="close-chat" style="cursor: pointer; font-size: 20px;">&times;</span>
+    <span id="close-chat" style="cursor: pointer; font-size: 20px;" aria-label="Close Chat" role="button" tabindex="0">&times;</span>
   </div>
   <div id="chat-content" style="flex: 1; padding: 15px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px;">
     <div class="message bot-message" data-i18n="chat_welcome">Hello! Welcome to HC Cleaning Services. How can I assist you today?</div>

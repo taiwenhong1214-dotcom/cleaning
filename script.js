@@ -204,7 +204,7 @@
       conversationHistory.push({ "role": "user", "content": messageText });
 
       const currentLang = localStorage.getItem('hc_lang') || 'en';
-      const typingId = addMessageToChat(translations[currentLang].chat_typing, 'bot-message');
+      const typingId = addMessageToChat('<div class="typing-indicator"><span></span><span></span><span></span></div>', 'bot-message');
 
       try {
           const response = await fetch('/api/chat', {
@@ -332,6 +332,9 @@
     e.preventDefault(); 
     
     const form = e.target;
+    const btn = form.querySelector('button[type="submit"]');
+    if (btn) btn.classList.add('btn-loading');
+
     const formData = new FormData(form);
     
     fetch('https://formspree.io/f/xvznjkwe', {
@@ -341,6 +344,7 @@
         'Accept': 'application/json'
       }
     }).then(response => {
+      if (btn) btn.classList.remove('btn-loading');
       if (response.ok) {
         document.getElementById('dlSuccess').style.display = 'block';
         setTimeout(() => {
@@ -352,6 +356,7 @@
         alert("Oops! There was a problem submitting your form");
       }
     }).catch(error => {
+      if (btn) btn.classList.remove('btn-loading');
       alert("Oops! There was a problem submitting your form");
     });
   }
@@ -359,6 +364,10 @@
   // Quote Form -> WhatsApp （动态适应当前语言）
   function submitToWhatsApp(e) {
     e.preventDefault(); 
+    const form = e.target;
+    const btn = form.querySelector('button[type="submit"]');
+    if (btn) btn.classList.add('btn-loading');
+
     const name = document.getElementById('qName').value;
     const company = document.getElementById('qCompany').value;
     const phone = document.getElementById('qPhone').value;
@@ -373,7 +382,10 @@
     message += "📞 *" + t.wa_contact + "* " + phone + "%0A";
     message += "🛠 *" + t.wa_service + "* " + service; 
     
-    window.open("https://api.whatsapp.com/send?phone=60194008021&text=" + message, '_blank');
+    setTimeout(() => {
+      if (btn) btn.classList.remove('btn-loading');
+      window.open("https://api.whatsapp.com/send?phone=60194008021&text=" + message, '_blank');
+    }, 500);
   }
 
   // Hamburger Menu

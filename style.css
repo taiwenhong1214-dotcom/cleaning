@@ -125,6 +125,30 @@
   .submit-btn:hover { background: var(--gold-light); }
   .submit-btn:active { transform: scale(0.97); }
 
+  /* ── SPINNER FOR BUTTONS ── */
+  .btn-loading {
+    position: relative;
+    color: transparent !important;
+    pointer-events: none;
+  }
+  .btn-loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    margin-left: -10px;
+    border: 2px solid var(--navy);
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: btnSpinner 0.8s linear infinite;
+  }
+  @keyframes btnSpinner {
+    to { transform: rotate(360deg); }
+  }
+
   .contact-info { margin-top: 40px; display: flex; flex-direction: column; gap: 20px; }
   .c-item { display: flex; gap: 15px; align-items: center; font-size: 15px; color: var(--white-dim); }
   .c-icon { font-size: 24px; }
@@ -166,6 +190,28 @@
   .message { padding: 10px 14px; border-radius: 6px; font-size: 13px; max-width: 85%; line-height: 1.4; word-wrap: break-word;}
   .message.user-message { background: var(--gold); color: var(--navy); align-self: flex-end; }
   .message.bot-message { background: var(--navy-light); color: var(--white); align-self: flex-start; border: 1px solid var(--border);}
+
+  /* ── TYPING INDICATOR ── */
+  .typing-indicator {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 5px 0;
+  }
+  .typing-indicator span {
+    display: block;
+    width: 6px;
+    height: 6px;
+    background-color: var(--white-dim);
+    border-radius: 50%;
+    animation: typingBounce 1.4s infinite ease-in-out both;
+  }
+  .typing-indicator span:nth-child(1) { animation-delay: -0.32s; }
+  .typing-indicator span:nth-child(2) { animation-delay: -0.16s; }
+  @keyframes typingBounce {
+    0%, 80%, 100% { transform: scale(0); }
+    40% { transform: scale(1); }
+  }
 
   /* =========================================
      💻 屏幕自适应机制 (Responsive Design)
