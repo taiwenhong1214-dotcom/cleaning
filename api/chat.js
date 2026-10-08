@@ -84,7 +84,7 @@ export default async function handler(req, res) {
                 "HTTP-Referer": "https://hc-cleaning-services.com"
             },
             body: JSON.stringify({
-                models: ["stealth/space-bunny-alpha"],
+                models: ["nvidia/nemotron-3-ultra-550b-a55b:free"],
                 messages: apiMessages,
                 temperature: 0.7,
                 stream: true
