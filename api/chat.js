@@ -84,7 +84,7 @@ export default async function handler(req, res) {
                 "HTTP-Referer": "https://hc-cleaning-services.com"
             },
             body: JSON.stringify({
-                models: ["typesafe/jev-1.13"],
+                models: ["openai/gpt-6-luna-decisions"],
                 messages: apiMessages,
                 temperature: 0.7,
                 stream: true
