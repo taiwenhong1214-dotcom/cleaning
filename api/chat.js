@@ -84,7 +84,7 @@ export default async function handler(req, res) {
                 "HTTP-Referer": "https://hc-cleaning-services.com"
             },
             body: JSON.stringify({
-                models: ["google/gemma-4-26b-a4b-it:free"],
+                models: ["google/gemma-4-31b-it:free"],
                 messages: apiMessages,
                 temperature: 0.7,
                 stream: true
