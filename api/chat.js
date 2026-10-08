@@ -84,7 +84,7 @@ export default async function handler(req, res) {
                 "HTTP-Referer": "https://hc-cleaning-services.com"
             },
             body: JSON.stringify({
-                models: ["inclusionai/ling-3.1-flash"],
+                models: ["apodex/apodex-1.1-mini:free"],
                 messages: apiMessages,
                 temperature: 0.7,
                 stream: true
